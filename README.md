@@ -1,4 +1,4 @@
-# 🎨 Decentralized Crowdfunding Smart Contract
+#  Decentralized Crowdfunding Smart Contract
 
 ### Course: Blockchain Technology  
 ### Assignment: Programming Assignment 2  
@@ -16,7 +16,7 @@
 
 ---
 
-## 📘 Overview
+##  Overview
 This Solidity smart contract implements a **trustless crowdfunding platform** designed for an independent artist who wants to raise funds transparently. It ensures that:
 - Funds are released to the project creator **only** when the funding goal is achieved before the campaign deadline.
 - If the goal is **not met**, all contributors can reclaim their exact contributions.
@@ -26,7 +26,7 @@ The contract eliminates intermediaries and ensures transparent handling of funds
 
 ---
 
-## ⚙️ Contract Summary
+##  Contract Summary
 
 **Contract Name:** `CrowdFunding`  
 **Language:** Solidity (v0.8.20 or later)
@@ -44,7 +44,7 @@ The contract eliminates intermediaries and ensures transparent handling of funds
 
 ---
 
-## 🧩 Function Details
+##  Function Details
 
 ### `constructor(uint _goal, uint _durationInMinutes)`
 Initializes campaign settings.  
@@ -82,9 +82,9 @@ Lets each contributor get their Ether back if the goal wasn’t reached.
 
 ---
 
-## 🚀 Campaign Lifecycle
+##  Campaign Lifecycle
 
-### ✅ Successful Campaign
+###  Successful Campaign
 1. Creator deploys with a funding goal and time limit.  
 2. Contributors fund the campaign.  
 3. When funds ≥ goal → creator withdraws after deadline.  
@@ -92,7 +92,7 @@ Lets each contributor get their Ether back if the goal wasn’t reached.
 **Flow:**  
 `Deploy → Contribute → Goal Reached → Deadline Passed → Creator Withdraws`
 
-### ❌ Failed Campaign
+###  Failed Campaign
 If the goal is not met before the deadline:  
 - Each backer reclaims their amount via `refund()`.
 
@@ -101,7 +101,7 @@ If the goal is not met before the deadline:
 
 ---
 
-## 🧪 Remix IDE Testing
+##  Remix IDE Testing
 1. Open [Remix IDE](https://remix.ethereum.org).  
 2. Paste the contents of `CrowdFunding.sol`.  
 3. Compile using **Solidity 0.8.20 or later**.  
@@ -113,7 +113,7 @@ If the goal is not met before the deadline:
 
 ---
 
-## 🔒 Security
+##  Security
 - Reentrancy protection (`refund()` resets before transfer).  
 - Restricted withdrawals (creator-only).  
 - Deadline and goal validation using `require()`.  
@@ -121,7 +121,7 @@ If the goal is not met before the deadline:
 
 ---
 
-## 💬 Viva Preparation
+##  Viva Preparation
 Be ready to explain:
 - Use of `msg.sender`, `msg.value`, and `payable`.  
 - Solidity function visibility (`public`, `external`, etc.).  
@@ -130,7 +130,7 @@ Be ready to explain:
 
 ---
 
-## ✅ Conclusion
+##  Conclusion
 The contract meets all assignment requirements — enabling secure, decentralized crowdfunding with proper handling of contributions, refunds, and transparent fund flow.
 
 ---
